@@ -80,7 +80,7 @@ class Lbann(CMakePackage):
     depends_on('aluminum +gpu +mpi_cuda', when='@:0.90,0.95: +al +gpu ~nccl')
     depends_on('aluminum +gpu +nccl +mpi_cuda', when='@:0.90,0.95: +al +gpu +nccl')
 
-    depends_on('cuda@10.2', when='+gpu')
+    depends_on('cuda', when='+gpu')
     depends_on('cudnn', when='+gpu')
     depends_on('cub', when='@0.94:0.98.2 +gpu')
     depends_on('mpi')
